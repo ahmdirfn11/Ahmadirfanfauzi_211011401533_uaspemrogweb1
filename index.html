@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Berita terbaru tentang demo dan aksi protes terkini di Indonesia.">
+    <meta name="keywords" content="Berita, Demo, Aksi Protes, Politik, Indonesia">
+    <title>Berita Demo Terbaru</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #333;
+        }
+
+        header {
+            background: #343a40;
+            color: #ffffff;
+            padding: 1rem;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center; 
+            justify-content: flex-start; 
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .header-logo img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 10px; 
+            margin-left: 0%;
+        }
+
+        .header-logo h1 {
+            color: #ffffff; 
+            margin-top: 0;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: flex-start;
+            background: #495057;
+            padding: 0.5rem 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .navbar a:hover {
+            background: #6c757d;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .sidebar-left, .sidebar-right {
+            flex: 1;
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 10px;
+        }
+
+        .main-content {
+            flex: 3;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 8px;
+        }
+
+        p,h1, h2, h3 {
+            color: #000000;
+        }
+
+        h2 {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            font-size: 1.25rem;
+            color: #000000;
+        }
+
+        .video-wrapper {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #000000;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            color: #000;
+        }
+
+        th {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            color: #000;
+        }
+
+        form input, form textarea, form button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+        }
+
+        form button {
+            background: #343a40;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background: #495057;
+        }
+
+        .sidebar-left h3, .sidebar-right h3 {
+            margin-top: 0;
+            color: #495057;
+        }
+
+        .sidebar-left a, .sidebar-right a {
+            display: block;
+            margin-bottom: 10px;
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .sidebar-left a:hover, .sidebar-right a:hover {
+            color: #0056b3;
+        }
+
+        .sidebar-left img, .sidebar-right img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .news-item {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: #343a40;
+            color: #ffffff;
+            padding: 1rem 0;
+            text-align: center;
+            border-top: 2px solid #dee2e6;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .footer-content p {
+            margin: 0;
+            font-size: 0.875rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .footer-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.875rem;
+        }
+
+        .footer-links a:hover {
+            color: #adb5bd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.AhmdrCbgj0N2QgdL2No4XgHaHa&pid=Api&rs=1&c=1&qlt=95&w=121&h=121" alt="Logo Berita.com">
+            <h1>Berita.com</h1>
+        </div>
+        <div class="navbar">
+            <a href="berita1.html">Otomotif</a>
+            <a href="berita2.html">Bola</a>
+        </div>
+        <div class="container">
+            <div class="sidebar-left">
+                <h3>Berita Singkat</h3>
+                <div class="news-item">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.gZhsEiQOsYtsleiJfUMw-QHaE_&pid=Api&P=0&h=180" alt="Berita Singkat 1">
+                    <a href="berita2.html">Indonesia U-20 Vs Argentina: Garuda Nusantara Sikat Tim Tango 2-1.</a>
+                </div>
+                <div class="news-item">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.v9H-tz0ic5IRsAuT1ZmodQHaE5&pid=Api&P=0&h=180" alt="Berita Singkat 2">
+                    <a href="berita1.html">Hyundai Ioniq 6 Facelift Kabarnya Meluncur Tahun Depan, Mukanya Berubah!.</a>
+                </div>
+                <div class="news-item">
+                    <img src="https://tse1.mm.bing.net/th?id=OIF.L07uD935rnxOz1wMhZVomg&pid=Api&P=0&h=180" alt="Berita Singkat 3">
+                    <a href="berita3.html">Mana Saja Daerah Berpotensi Gempa Megathrust? Cek 16 Zona Megathrust di Sini.</a>
+                </div>
+            </div>
+            
+            <div class="main-content">
+                <h1>Berita Terbaru Tentang Demo</h1>
+                
+                <img src="https://cdn1-production-images-kly.akamaized.net/1OnwNK2dMaYPNohbibEHOr57Yfg=/640x480/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4924335/original/031481000_1724242386-Peringatan_Darurat_0.jpg" alt="Demo kemarin">
+                
+                <h2>Aksi Demo Tolak Revisi UU Pilkada di Gedung DPR RI Memanas Setelah Massa Bobol Pagar</h2>
+                <p>
+                    Revisi Undang-Undang (RUU) Pilkada batal disahkan Dewan Perwakilan Rakyat (DPR) Republik Indonesia (RI). Wakil Ketua DPR RI Sufmi Dasco Ahmad mengatakan hal itu disebabkan rapat paripurna dengan agenda pengesahan tersebut pada pagi hari tadi tidak bisa diteruskan karena kurangnya jumlah peserta rapat atau tidak kuorum.
+                    Demo yang berlangsung kemarin di pusat kota menarik perhatian banyak orang. Ribuan peserta turun ke jalan untuk menyuarakan tuntutan mereka terkait isu-isu penting. Berikut adalah rangkuman acara dan beberapa media terkait.
+                </p>
+                <p>
+                    "Hari ini pada tanggal 22 Agustus jam 10.00, setelah kemudian mengalami penundaan selama 30 menit (tetap tidak kuorum), maka tadi sudah diketok, revisi Undang-Undang Pilkada tidak dapat dilaksanakan," kata Dasco di Kompleks Parlemen Senayan Jakarta, Kamis (22/8/2024).
+                    "Artinya, pada hari ini revisi Undang-Undang Pilkada batal dilaksanakan," tegas Dasco.
+                    Dasco juga menyatakan, karena revisi beleid tersebut batal disahkan, maka acuan yang harus digunakan untuk membentuk Peraturan Komisi Pemilihan Umum (PKPU) adalah putusan Mahkamah Konstitusi (MK) yang bersifat final dan mengikat.
+                    Dia pun menegaskan DPR tidak akan melakukan paripurna lagi untuk mengesahkan revisi payung hukum Pilkada 2024. Alasannya, waktu pendaftaran calon kepala daerah sudah mepet dan bertepatan dengan jadwal rutin rapat paripurna yaitu Selasa dan Kamis.
+                    "Oleh karena itu, sesuai dengan mekanisme yang berlaku, apabila mau ada paripurna lagi harus mengikuti tahapan-tahapan yang diatur sesuai dengan tata tertib di DPR. Dan karena pada hari Selasa tanggal 27 Agustus 2024 kita sama-sama tahu sudah pada tahapan pendaftaran pilkada," jelas dia.
+                    "Oleh karena itu, kami tegaskan sekali lagi, karena kita patuh dan taat dan tunduk kepada aturan berlaku bahwa pada saat pendaftaran nanti karena RUU Pilkada belum disahkan menjadi undang-undang, maka yang berlaku adalah hasil keputusan Mahkamah Konstitusi judicial review yang diajukan oleh Partai Buruh dan Gelora," tegas Dasco.
+                    Diketahui, akibat adanya rencana rapat pengesahan revisi UU Pilkada, pada hari ini, Kamis (22/8/2024), rakyat turun ke jalan. Bukan hanya di Jakarta, aksi unjuk rasa juga digelar di berbagai wilayah Tanah Air.
+                    Para demonstran menilai Badan Legislatif DPR telah melakukan tindakan inkonstitusional. Masyarakat dari berbagai elemen berdemonstrasi menentang upaya pengesahan sewenang-wenang dari DPR RI. Dengan batalnya paripurna pengesahan revisi Undang-Undang Pilkada, maka perjuangan rakyat pada hari ini berhasil. Selamat!
+                </p>
+                
+                <h3>Gambar dari Acara</h3>
+                <img src="https://asset.kompas.com/crops/C9fG7YVaPYIWloMM7Ni7rl9_Tdg=/0x0:0x0/1200x800/data/photo/2024/08/23/66c7d48b1c62b.jpg" alt="Demo kemarin">
+                
+                <h3>Video Liputan Acara</h3>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/eE31yVLRgdc?si=CjHf6xdn2SrQwEJJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <h2>Daftar Berita Lainnya</h2>
+                <table>
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Judul Berita</th>
+                    </tr>
+                    <tr>
+                        <td>28 Agustus 2024</td>
+                        <td><a href="berita4.html">Demo Tolak Kenaikan BBM</a></td>
+                    </tr>
+                    <tr>
+                        <td>27 Agustus 2024</td>
+                        <td><a href="berita5.html">Rencana Pemerintah Mengatasi Inflasi</a></td>
+                    </tr>
+                </table>
+
+                <h2>Formulir Komentar</h2>
+                <form id="comment-form" action="#" method="post">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="comment">Komentar:</label>
+                    <textarea id="comment" name="comment" rows="5" required></textarea>
+    
+                    <button type="submit">Kirim Komentar</button>
+                </form>
+            </div>
+            
+            <div class="sidebar-right">
+                <h3>Berita Populer</h3>
+                <div class="news-item">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.AhmdrCbgj0N2QgdL2No4XgHaHa&pid=Api&rs=1&c=1&qlt=95&w=121&h=121" alt="Berita Populer 1">
+                    <a href="berita6.html">Menariknya Teknologi Mobil Listrik Terbaru</a>
+                </div>
+                <div class="news-item">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.xDpTfyj-LShqN7a5P5F-vQHaE8&pid=Api&P=0&h=180" alt="Berita Populer 2">
+                    <a href="berita7.html">Politik Terkini: Apa yang Terjadi di Parlemen?</a>
+                </div>
+                <div class="news-item">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.4WRO_HAqgh31-sVrMBu98AHaE_&pid=Api&P=0&h=180" alt="Berita Populer 3">
+                    <a href="berita8.html">Cara Baru Menghadapi Krisis Energi Global</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Berita.com. Semua hak cipta dilindungi undang-undang.</p>
+            <p>&copy; Ahmad Irfan Fauzi</p>
+            <ul class="footer-links">
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Kontak</a></li>
+                <li><a href="#">Kebijakan Privasi</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('comment-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            alert('Komentar Anda telah dikirim. Terima kasih!');
+            this.reset(); 
+        });
+    </script>
+</body>
+</html>
